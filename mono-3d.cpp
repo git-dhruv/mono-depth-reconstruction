@@ -443,6 +443,10 @@ bool updateDepthFilter(
     A(1, 0) = -A(0, 1);
     A(1, 1) = -f2.dot(f2);
     Eigen::Vector2d ans = A.inverse() * b;
+
+    //Don't update depth if it is negative
+    if(ans[0]*ans[1] < 0) return 1;
+
     Eigen::Vector3d xm = ans[0] * f_ref;           // ref 
     Eigen::Vector3d xn = t + ans[1] * f2;          // cur 
     Eigen::Vector3d p_esti = (xm + xn) / 2.0;      
