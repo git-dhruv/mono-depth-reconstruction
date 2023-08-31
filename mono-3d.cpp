@@ -432,7 +432,7 @@ bool updateDepthFilter(
     //lambda q = mu*Rp + t
     //[q - Rp ][d1;d2] = t
     // Try with psuedo inverse approach
-    pseudoInverse()
+    // pseudoInverse()
 
     Eigen::Vector3d t = C_T_R.translation();
     Eigen::Vector3d f2 = C_T_R.so3() * f_curr;
