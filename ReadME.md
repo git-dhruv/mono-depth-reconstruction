@@ -19,3 +19,5 @@ The Results that we obtain is as follows
   </tr>
 </table>
 
+## Note
+The helper functions for reading/writing were written by Dr. Gao. I just rewrote the implementation for learning purposes :) 
